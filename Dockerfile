@@ -1,6 +1,7 @@
 # syntax=docker/dockerfile:1
 #!/usr/bin/env bash
 # docker login if needed `docker login docker.io`
+FROM base_os
 
 USER root
 
@@ -15,7 +16,7 @@ RUN mv apache-tomcat-8.5.82/* /opt/tomcat/
 RUN apt update
 RUN apt install -y default-jdk
 RUN java -version
-COPY ./SampleWebApp.war /opt/tomcat/webapps/
+#COPY ./SampleWebApp.war /opt/tomcat/webapps/
 
 ENV CATALINA_HOME /opt/tomcat/
 ENV CATALINA_BASE /opt/tomcat/
