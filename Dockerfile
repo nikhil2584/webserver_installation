@@ -1,7 +1,8 @@
 # syntax=docker/dockerfile:1
 #!/usr/bin/env bash
 # docker login if needed `docker login docker.io`
-FROM nikhil2584/ubuntu:base1
+
+FROM ubuntu
 
 USER root
 
